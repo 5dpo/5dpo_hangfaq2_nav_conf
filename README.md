@@ -27,6 +27,7 @@ based on your environment variables.
 ### Dependencies
 
 - [5dpo_q2_firmware](https://github.com/5dpo/5dpo_q2_firmware)
+- [rviz](https://wiki.ros.org/rviz)
 - [sdpo_driver_omnijoy](https://github.com/5dpo/5dpo_driver_omnijoy)
 - [sdpo_q2_ros_driver](https://github.com/5dpo/5dpo_q2_ros_driver/)
 - [sdpo_ros_odom](https://github.com/5dpo/5dpo_ros_odom)
@@ -49,6 +50,8 @@ export ROBOT_CONF=<configuration>   # (default: basic)
 - Drivers
   - sdpo_driver_omnijoy
   - sdpo_q2_ros_driver
+- Human-Machine Interface (HMI)
+  - rviz
 - Localization
   - sdpo_ros_odom
 
