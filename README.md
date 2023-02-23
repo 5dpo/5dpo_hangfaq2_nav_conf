@@ -1,6 +1,6 @@
 # 5dpo_q2_ros_nav_conf
 
-**Version 0.0.0**
+**Version 0.1.0**
 
 This repository implements the launch files required for the 5DPO Navigation
 Stack on the
@@ -12,10 +12,11 @@ based on your environment variables.
 **With this version, it is possible to do:**
 
 - ROS package creation (`CMakeLists.txt`, `package.xml`)
+- `basic` configuration
 
 **The next version will add these features:**
 
-- `basic` configuration
+- TBD
 
 ## ROS
 
