@@ -1,6 +1,6 @@
 # 5dpo_q2_ros_nav_conf
 
-**Version 0.0.0**
+**Version 0.1.0**
 
 This repository implements the launch files required for the 5DPO Navigation
 Stack on the
@@ -12,10 +12,11 @@ based on your environment variables.
 **With this version, it is possible to do:**
 
 - ROS package creation (`CMakeLists.txt`, `package.xml`)
+- `basic` configuration
 
 **The next version will add these features:**
 
-- `basic` configuration
+- TBD
 
 ## ROS
 
@@ -27,6 +28,7 @@ based on your environment variables.
 ### Dependencies
 
 - [5dpo_q2_firmware](https://github.com/5dpo/5dpo_q2_firmware)
+- [rviz](https://wiki.ros.org/rviz)
 - [sdpo_driver_omnijoy](https://github.com/5dpo/5dpo_driver_omnijoy)
 - [sdpo_q2_ros_driver](https://github.com/5dpo/5dpo_q2_ros_driver/)
 - [sdpo_ros_odom](https://github.com/5dpo/5dpo_ros_odom)
@@ -49,6 +51,8 @@ export ROBOT_CONF=<configuration>   # (default: basic)
 - Drivers
   - sdpo_driver_omnijoy
   - sdpo_q2_ros_driver
+- Human-Machine Interface (HMI)
+  - rviz
 - Localization
   - sdpo_ros_odom
 
