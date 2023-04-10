@@ -1,6 +1,4 @@
-# 5dpo_q2_ros_nav_conf
-
-**Version 0.1.1**
+# [5dpo_q2_ros_nav_conf](https://github.com/5dpo/5dpo_q2_ros_nav_conf)
 
 This repository implements the launch files required for the 5DPO Navigation
 Stack on the
@@ -9,14 +7,28 @@ system implemented is based on the INESC TEC Robotics Navigation Stack that it
 allows you to have different configurations implemented and selecting just one
 based on your environment variables.
 
+**Version 0.2.0**
+
 **With this version, it is possible to do:**
 
 - ROS package creation (`CMakeLists.txt`, `package.xml`)
 - `basic` configuration
+- `sim0` configuration (Gazebo-based Simulation)
 
 **The next version will add these features:**
 
-- TBD
+- `slam0` configuration ([SLAM Toolbox](https://wiki.ros.org/slam_toolbox))
+- `slam1` configuration ([Hector SLAM](https://wiki.ros.org/hector_mapping))
+- `slam2` configuration ([GMapping](https://wiki.ros.org/gmapping))
+- `slam0sim0feup0` configuration (
+  [SLAM Toolbox](https://wiki.ros.org/slam_toolbox) w/ Gazebo-based simulation
+  in the [FEUP](https://sigarra.up.pt/feup/en) world environment)
+- `slam1sim0feup0` configuration (
+  [Hector SLAM](https://wiki.ros.org/hector_mapping) w/ Gazebo-based simulation
+  in the [FEUP](https://sigarra.up.pt/feup/en) world environment)
+- `slam2sim0feup0` configuration (
+  [GMapping](https://wiki.ros.org/gmapping) w/ Gazebo-based simulation
+  in the [FEUP](https://sigarra.up.pt/feup/en) world environment)
 
 ## ROS
 
@@ -28,6 +40,8 @@ based on your environment variables.
 ### Dependencies
 
 - [5dpo_q2_firmware](https://github.com/5dpo/5dpo_q2_firmware)
+- [robot_omni4_description](https://github.com/5dpo/robot_omni4_description)
+- [robot_omni4_gazebo_driver](https://github.com/5dpo/robot_omni4_gazebo_driver)
 - [rviz](https://wiki.ros.org/rviz)
 - [sdpo_driver_omnijoy](https://github.com/5dpo/5dpo_driver_omnijoy)
 - [sdpo_q2_ros_driver](https://github.com/5dpo/5dpo_q2_ros_driver/)
@@ -51,6 +65,17 @@ export ROBOT_CONF=<configuration>   # (default: basic)
 - Drivers
   - sdpo_driver_omnijoy
   - sdpo_q2_ros_driver
+- Human-Machine Interface (HMI)
+  - rviz
+- Localization
+  - sdpo_ros_odom
+
+**`sim0`**
+
+- Drivers
+  - robot_omni4_description
+  - robot_omni4_gazebo_driver
+  - sdpo_driver_omnijoy
 - Human-Machine Interface (HMI)
   - rviz
 - Localization
