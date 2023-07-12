@@ -14,7 +14,7 @@ lidar:
       start_angle: 0               #Start angle of point cloud
       end_angle: 360               #End angle of point cloud 
       wait_for_difop: true
-      min_distance: 0.35           #Minimum distance of point cloud
+      min_distance: 0.55           #Minimum distance of point cloud
       max_distance: 150            #Maximum distance of point cloud
       use_lidar_clock: false       #True--Use the lidar clock as the message timestamp
                                    #False-- Use the system clock as the timestamp
