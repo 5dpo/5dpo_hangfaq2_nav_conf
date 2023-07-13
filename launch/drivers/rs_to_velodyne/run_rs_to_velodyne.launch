@@ -1,0 +1,16 @@
+<launch>
+  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)"/>
+
+
+
+  <group ns="$(arg robot_id)">
+
+    <node pkg="rs_to_velodyne" type="rs_to_velodyne" name="rs_converter"
+        args="XYZI XYZIRT"
+        output="screen">
+      <!--remap from="/rslidar_points" to="rslidar_points"/-->
+    </node>
+
+  </group>
+
+</launch>

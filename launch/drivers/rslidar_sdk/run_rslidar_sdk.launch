@@ -1,0 +1,18 @@
+<launch>
+  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)"/>
+
+  <group ns="$(arg robot_id)">
+
+    <node pkg="rslidar_sdk" name="rslidar_sdk_node" type="rslidar_sdk_node"
+        output="screen">
+      <param name="config_path" value="$(dirname)/rslidar_sdk.yaml"/>
+    </node>
+
+  </group>
+
+
+
+  <!--node pkg="rviz" name="rviz" type="rviz"
+      args="-d $(find rslidar_sdk)/rviz/rviz.rviz" /-->
+
+</launch>

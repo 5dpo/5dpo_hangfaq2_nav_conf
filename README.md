@@ -7,13 +7,14 @@ system implemented is based on the INESC TEC Robotics Navigation Stack that it
 allows you to have different configurations implemented and selecting just one
 based on your environment variables.
 
-**Version 0.2.0**
+**Version 0.3.0**
 
 **With this version, it is possible to do:**
 
 - ROS package creation (`CMakeLists.txt`, `package.xml`)
 - `basic` configuration
 - `sim0` configuration (Gazebo-based Simulation)
+- `slam3d0` configuration (A-LOAM)
 
 **The next version will add these features:**
 
@@ -37,21 +38,9 @@ based on your environment variables.
 - [Ubuntu 20.04.5 LTS](https://releases.ubuntu.com/focal/)
 - [ROS Noetic](https://wiki.ros.org/noetic)
 
-### Dependencies
-
-- [5dpo_q2_firmware](https://github.com/5dpo/5dpo_q2_firmware)
-- [robot_omni4_description](https://github.com/5dpo/robot_omni4_description)
-- [robot_omni4_gazebo_driver](https://github.com/5dpo/robot_omni4_gazebo_driver)
-- [rviz](https://wiki.ros.org/rviz)
-- [sdpo_driver_omnijoy](https://github.com/5dpo/5dpo_driver_omnijoy)
-- [sdpo_q2_ros_driver](https://github.com/5dpo/5dpo_q2_ros_driver/)
-- [sdpo_ros_odom](https://github.com/5dpo/5dpo_ros_odom)
-
 ## Usage
 
-### Configurations
-
-**Usage**
+### Setup
 
 ```sh
 # Robot id
@@ -59,27 +48,6 @@ export ROBOT_ID=<id>                # (default: unnamed_robot)
 # Configuration
 export ROBOT_CONF=<configuration>   # (default: basic)
 ```
-
-**`basic`**
-
-- Drivers
-  - sdpo_driver_omnijoy
-  - sdpo_q2_ros_driver
-- Human-Machine Interface (HMI)
-  - rviz
-- Localization
-  - sdpo_ros_odom
-
-**`sim0`**
-
-- Drivers
-  - robot_omni4_description
-  - robot_omni4_gazebo_driver
-  - sdpo_driver_omnijoy
-- Human-Machine Interface (HMI)
-  - rviz
-- Localization
-  - sdpo_ros_odom
 
 ### Compilation
 
@@ -107,11 +75,14 @@ roslaunch sdpo_q2_ros_nav_conf wake_up_almighty_q2.launch
 If you have any questions or you want to know more about this work, please
 contact one of the contributors of this package:
 
-- Héber Miguel Sobreira ([gitlab](https://gitlab.inesctec.pt/heber.m.sobreira),
-  [inesctec](mailto:heber.m.sobreira@inesctec.pt))
+- António Paulo Moreira ([github](https://github.com/apaulomoreira),
+  [mail](mailto:amoreira@fe.up.pt))
+- Héber Miguel Sobreira ([github](https://github.com/HeberSobreira),
+  [gitlab](https://gitlab.inesctec.pt/heber.m.sobreira),
+  [mail](mailto:heber.m.sobreira@inesctec.pt))
 - Ricardo B. Sousa ([github](https://github.com/sousarbarb/),
-  [gitlab](https://gitlab.com/sousarbarb/),
-  [personal](mailto:sousa.ricardob@outlook.com),
-  [feup:professor](mailto:rbs@fe.up.pt),
-  [feup:student](mailto:up201503004@edu.fe.up.pt),
-  [inesctec](mailto:ricardo.b.sousa@inesctec.pt))
+  [gitlab](https://gitlab.inesctec.pt/ricardo.b.sousa),
+  [mail:inesctec](mailto:ricardo.b.sousa@inesctec.pt),
+  [mail:personal](mailto:sousa.ricardob@outlook.com),
+  [mail:professor](mailto:rbs@fe.up.pt),
+  [mail:student](mailto:up201503004@edu.fe.up.pt))

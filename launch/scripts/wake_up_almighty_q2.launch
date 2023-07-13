@@ -1,9 +1,12 @@
 <launch>
-  <!-- Drivers Abstraction Layer -->
+  <!-- Drivers -->
   <include file="$(dirname)/run_drivers.launch"/>
 
-  <!-- Robot Localization Abstraction Layer -->
+  <!-- Robot Localization Algorithms -->
   <include file="$(dirname)/run_localization.launch"/>
+
+  <!-- Simultaneous Localization and Mapping Algorithms (SLAM) -->
+  <include file="$(dirname)/run_slam.launch"/>
 
   <!-- Human-Machine Interface (HMI) Abstraction Layer -->
   <include file="$(dirname)/run_hmi.launch"/>
