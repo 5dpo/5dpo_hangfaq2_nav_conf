@@ -17,11 +17,11 @@
       <param name="axis_turbo" value="5"/>
       <param name="axis_turbo_up" value="7"/>
       <param name="axis_turbo_down" value="6"/>
-      <param name="scale_angular" value="1.0"/>
-      <param name="scale_linear" value="0.4"/>
-      <param name="turbo_scale_linear" value="0.25"/>
+      <param name="scale_linear" value="0.15"/>
+      <param name="scale_angular" value="0.30"/>
+      <param name="turbo_scale_linear" value="1.0"/>
       <param name="turbo_max_scale_linear" value="0.4"/>
-      <param name="turbo_scale_angular" value="0.40"/>
+      <param name="turbo_scale_angular" value="2.5"/>
     </node>
   </group>
 </launch>

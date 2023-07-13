@@ -1,6 +1,6 @@
 <launch>
   <include file="$(dirname)/../../drivers/sdpo_q2_ros_driver/run_sdpo_q2_ros_driver.launch"/>
-  <!--include file="$(dirname)/../../drivers/sdpo_driver_omnijoy/run_sdpo_driver_omnijoy_logif710.launch"/-->
+  <include file="$(dirname)/../../drivers/sdpo_driver_omnijoy/run_sdpo_driver_omnijoy_logif710.launch"/>
   <include file="$(dirname)/../../drivers/static_transform_publisher/run_static_transform_publisher_rs_helios_5515.launch"/>
   <include file="$(dirname)/../../drivers/rslidar_sdk/run_rslidar_sdk.launch"/>
   <include file="$(dirname)/../../drivers/rs_to_velodyne/run_rs_to_velodyne.launch"/>
