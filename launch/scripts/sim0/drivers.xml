@@ -1,5 +1,0 @@
-<launch>
-  <include file="$(dirname)/../../drivers/robot_omni4_gazebo_driver/run_robot_omni4_gazebo_driver.launch"/>
-  <include file="$(dirname)/../../drivers/robot_omni4_description/run_robot_omni4_description.launch"/>
-  <include file="$(dirname)/../../drivers/sdpo_driver_omnijoy/run_sdpo_driver_omnijoy_logif710.launch"/>
-</launch>

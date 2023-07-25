@@ -1,3 +1,0 @@
-<launch>
-  <include file="$(dirname)/../../slam/aloam_velodyne/run_aloam_velodyne_rs_helios_5515.launch"/>
-</launch>
