@@ -1,0 +1,18 @@
+<launch>
+
+  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
+
+
+
+  <node pkg="vineslam_ros" exec="slam_node"
+      name="slam_node">
+      <!-- namespace="$(var robot_id)"> -->
+
+    <remap from="/odom_topic" to ="/odom"/>
+    <remap from="/scan_topic" to ="/scan"/>
+
+    <param file="$(find-pkg-share sdpo_hangfaq2_nav_conf)/launch/slam/vineslam_ros/config.yaml"/>
+
+  </node>
+
+</launch>
