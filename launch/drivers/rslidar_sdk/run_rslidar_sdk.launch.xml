@@ -5,7 +5,7 @@
 
 
   <node pkg="rslidar_sdk" exec="rslidar_sdk_node" output="screen"
-      args="$(find-pkg-share sdpo_hangfaq2_nav_conf)/launch/drivers/rslidar_sdk/rslidar_sdk.yaml"
+      args="$(find-pkg-share sdpo_hangfaq2_nav_conf)/launch/drivers/rslidar_sdk/rslidar_sdk.yaml $(var robot_id)"
       namespace="$(var robot_id)"/>
 
 </launch>

@@ -5,13 +5,76 @@
 
 
   <node pkg="vineslam_ros" exec="slam_node"
-      name="slam_node">
-      <!-- namespace="$(var robot_id)"> -->
+      name="vineslam"
+      namespace="$(var robot_id)">
 
-    <remap from="/odom_topic" to ="/odom"/>
-    <remap from="/scan_topic" to ="/scan"/>
+    <remap from="odom_topic" to ="odom"/>
+    <remap from="scan_topic" to ="rslidar_points"/>
 
-    <param file="$(find-pkg-share sdpo_hangfaq2_nav_conf)/launch/slam/vineslam_ros/config.yaml"/>
+
+
+    <param name="world_frame_id" value="$(var robot_id)/map"/>
+    <param name="odom_frame_id" value="$(var robot_id)/odom"/>
+    <param name="base_frame_id" value="$(var robot_id)/base_footprint"/>
+    <param name="lidar_sensor_frame" value="$(var robot_id)/rslidar"/>
+
+    <param name="use_semantic_features" value="False"/>
+    <param name="use_lidar_features" value="True"/>
+    <param name="use_vertical_planes" value="False"/>
+    <param name="use_ground_plane" value="False"/>
+    <param name="use_imu" value="False"/>
+    <param name="use_gyroscope" value="False"/>
+    <param name="use_gps" value="False"/>
+    <param name="use_gps_altitude" value="False"/>
+    <param name="use_gps_heading" value="False"/>
+
+    <param name="publish_level" value="2"/>
+
+    <param name="robot_dimensions">
+      <param name="x" value="0.42"/>
+      <param name="y" value="0.32"/>
+      <param name="z" value="0.37"/>
+    </param>
+
+    <param name="multilayer_mapping">
+
+      <param name="datum">
+        <param name="latitude" value="45.706199"/>
+        <param name="longitude" value="7.2495435"/>
+        <param name="altitude" value="668.63"/>
+      </param>
+
+      <param name="topological_map">
+        <param name="autogen_topological_map" value="True"/>
+        <param name="folder" value="/home/sousarbarb/.ros/vineslam/"/>
+
+        <param name="dimensions">
+          <param name="x" value="100.0"/>
+          <param name="y" value="100.0"/>
+          <param name="square_size" value="20.0"/>
+        </param>
+      </param>
+
+      <param name="grid_map">
+        <param name="origin">
+          <param name="z" value="0.0"/>
+        </param>
+
+        <param name="height" value="30.0"/>
+        <param name="resolution" value="0.25"/>
+      </param>
+
+    </param>
+
+    <param name="pf">
+      <param name="n_particles" value="300"/>
+      <param name="sigma_xx" value="0.3"/>
+      <param name="sigma_yy" value="0.3"/>
+      <param name="sigma_zz" value="0.2"/>
+      <param name="sigma_RR" value="0.1"/>
+      <param name="sigma_PP" value="0.1"/>
+      <param name="sigma_YY" value="0.2"/>
+    </param>
 
   </node>
 

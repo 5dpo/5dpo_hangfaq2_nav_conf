@@ -1,5 +1,5 @@
 <launch>
 
-
+  <include file="$(find-pkg-share sdpo_hangfaq2_nav_conf)/launch/slam/vineslam_ros/run_vineslam_ros.launch.xml"/>
 
 </launch>
