@@ -12,7 +12,9 @@ based on your environment variables.
 **With this version, it is possible to do:**
 
 - ROS package creation (`CMakeLists.txt`, `package.xml`)
-- `basic` configuration
+- [`basic`](/launch/environment/basic/) configuration
+- [`slam3d_vineslam`](/launch/environment/slam3d_vineslam/) configuration
+  ([vineslam](https://gitlab.inesctec.pt/agrob/vineslam_stack/vineslam))
 
 **The next version will add these features:**
 
