@@ -1,0 +1,32 @@
+<launch>
+
+  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
+
+
+
+  <node pkg="kiss_icp" exec="odometry_node"
+      name="kiss_icp"
+      namespace="$(var robot_id)">
+
+    <remap from="pointcloud_topic" to ="rslidar_points"/>
+
+
+
+    <param name="odom_frame" value="$(var robot_id)/odom"/>
+    <param name="child_frame" value="$(var robot_id)/rslidar"/>
+
+    <param name="publish_odom_tf" value="True"/>
+    <param name="publish_alias_tf" value="True"/>
+
+    <param name="max_range" value="150.0"/>
+    <param name="min_range" value="1.0"/>
+
+    <param name="deskew" value="False"/>
+    <param name="voxel_size" value="0.20"/>
+    <param name="max_points_per_voxel" value="15"/>
+    <param name="initial_threshold" value="2.0"/>
+    <param name="min_motion_th" value="0.1"/>
+
+  </node>
+
+</launch>

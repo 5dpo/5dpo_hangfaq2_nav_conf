@@ -1,0 +1,5 @@
+<launch>
+
+  <include file="$(find-pkg-share sdpo_hangfaq2_nav_conf)/launch/slam/kiss_icp/run_kiss_icp.launch.xml"/>
+
+</launch>

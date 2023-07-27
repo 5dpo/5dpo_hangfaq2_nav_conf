@@ -2,11 +2,22 @@
 
   <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
 
+  <arg name="invert_tf" default="False"/>
+
 
 
   <node pkg="tf2_ros" exec="static_transform_publisher"
       name="laser_broadcaster"
       args="0 0 0.3235 0 0 0 $(var robot_id)/base_footprint $(var robot_id)/rslidar"
+      unless="$(var invert_tf)"
+      namespace="$(var robot_id)"/>
+
+
+
+  <node pkg="tf2_ros" exec="static_transform_publisher"
+      name="laser_broadcaster"
+      args="0 0 -0.3235 0 0 0 $(var robot_id)/rslidar $(var robot_id)/base_footprint"
+      if="$(var invert_tf)"
       namespace="$(var robot_id)"/>
 
 </launch>

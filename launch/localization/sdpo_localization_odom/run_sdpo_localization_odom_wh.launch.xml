@@ -2,6 +2,8 @@
 
   <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
 
+  <arg name="publish_tf" default="True"/>
+
 
 
   <node pkg="sdpo_localization_odom" exec="sdpo_localization_odom_wh"
@@ -11,7 +13,7 @@
     <param name="base_frame_id" value="$(var robot_id)/base_footprint"/>
     <param name="odom_frame_id" value="$(var robot_id)/odom"/>
 
-    <param name="publish_tf" value="true"/>
+    <param name="publish_tf" value="$(var publish_tf)"/>
     <param name="invert_tf"  value="false"/>
 
     <param name="w_ref_max_enabled" value="false"/>
