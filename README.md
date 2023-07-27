@@ -15,6 +15,8 @@ based on your environment variables.
 - [`basic`](/launch/environment/basic/) configuration
 - [`slam3d_vineslam`](/launch/environment/slam3d_vineslam/) configuration
   ([vineslam](https://gitlab.inesctec.pt/agrob/vineslam_stack/vineslam))
+- [`slam3d_kissicp`](/launch/environment/slam3d_kissicp/) configuration
+  ([KISS-ICP](https://github.com/PRBonn/kiss-icp))
 
 **The next version will add these features:**
 
